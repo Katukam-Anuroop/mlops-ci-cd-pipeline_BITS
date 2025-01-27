@@ -1,10 +1,11 @@
+import os
+import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.preprocessing import StandardScaler
 import mlflow
 import mlflow.sklearn
-import os
-import numpy as np
 
 # Set MLflow tracking URI
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
@@ -18,18 +19,21 @@ data = pd.read_csv("advertising.csv")
 data.fillna(data.mean(), inplace=True)
 print(data.isnull().sum())
 
-
 experiments = [
     {"features": ["TV"], "experiment_name": "Experiment_1_TV"},
     {"features": ["TV", "Radio"], "experiment_name": "Experiment_2_TV_Radio"},
-    {"features": ["TV", "Radio", "Newspaper"], "experiment_name": "Experiment_3_All_Features"},
+    {"features": ["TV", "Radio", "Newspaper"],
+     "experiment_name": "Experiment_3_All_Features"},
 ]
 
-# Gradient Descent Implementation
+
 def gradient_descent(X, y, learning_rate=0.0001, iterations=1000):
+    """
+    Implements gradient descent for linear regression.
+    """
     m, n = X.shape
-    X = np.c_[np.ones((m, 1)), X]  # Add bias term
-    theta = np.zeros((n + 1, 1))  # Initialize weights
+    X = np.c_[np.ones((m, 1)), X]
+    theta = np.zeros((n + 1, 1))
     y = y.reshape(-1, 1)
 
     for i in range(iterations):
@@ -40,9 +44,6 @@ def gradient_descent(X, y, learning_rate=0.0001, iterations=1000):
 
         theta -= learning_rate * gradients
 
-        # Debugging: Check for invalid values
-        if i % 100 == 0:
-            print(f"Iteration {i}: gradients={gradients.flatten()}, theta={theta.flatten()}")
         if np.isnan(theta).any() or np.isinf(theta).any():
             print(f"Gradient Descent diverged at iteration {i}")
             break
@@ -52,20 +53,27 @@ def gradient_descent(X, y, learning_rate=0.0001, iterations=1000):
 
 # Iterate through each experiment
 for exp in experiments:
-    print(f"Running {exp['experiment_name']} with features: {exp['features']}")
+    print(f"Running {exp['experiment_name']} features: {exp['features']}")
 
     # Extract features and target variable
+    scaler = StandardScaler()
     X = data[exp["features"]].values
-    print(X)
     y = data["Sales"].values
 
+    # Normalize features
+    X_scaled = scaler.fit_transform(X)
+
     # Train-test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(
+        X_scaled, y, test_size=0.2, random_state=42
+    )
 
     # Start MLflow run
     with mlflow.start_run(run_name=exp["experiment_name"]):
         # Train model using gradient descent
-        theta = gradient_descent(X_train, y_train, learning_rate=0.01, iterations=1000)
+        theta = gradient_descent(
+            X_train, y_train, learning_rate=0.0001, iterations=1000
+        )
 
         # Make predictions
         X_test_with_bias = np.c_[np.ones((X_test.shape[0], 1)), X_test]
@@ -78,7 +86,7 @@ for exp in experiments:
         # Log parameters
         mlflow.log_param("features", ", ".join(exp["features"]))
         mlflow.log_param("method", "Gradient Descent")
-        mlflow.log_param("learning_rate", 0.01)
+        mlflow.log_param("learning_rate", 0.0001)
         mlflow.log_param("iterations", 1000)
 
         # Log metrics
