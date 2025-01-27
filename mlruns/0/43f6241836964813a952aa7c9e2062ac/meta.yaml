@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/43f6241836964813a952aa7c9e2062ac/artifacts
+end_time: 1737995030789
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 43f6241836964813a952aa7c9e2062ac
+run_name: glamorous-newt-327
+run_uuid: 43f6241836964813a952aa7c9e2062ac
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737995029056
+status: 3
+tags: []
+user_id: anuroopkatukam

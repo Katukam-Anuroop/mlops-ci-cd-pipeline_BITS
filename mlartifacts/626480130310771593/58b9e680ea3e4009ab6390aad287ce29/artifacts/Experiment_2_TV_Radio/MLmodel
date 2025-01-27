@@ -1,0 +1,20 @@
+artifact_path: Experiment_2_TV_Radio
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.13.1
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.6.1
+mlflow_version: 2.20.0
+model_size_bytes: 536
+model_uuid: bbf570f0e11a4e25bac914fd9b8703d1
+run_id: 58b9e680ea3e4009ab6390aad287ce29
+utc_time_created: '2025-01-27 16:25:35.921713'

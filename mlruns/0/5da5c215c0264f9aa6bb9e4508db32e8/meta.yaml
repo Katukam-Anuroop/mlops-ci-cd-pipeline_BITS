@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/5da5c215c0264f9aa6bb9e4508db32e8/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5da5c215c0264f9aa6bb9e4508db32e8
+run_name: stately-owl-245
+run_uuid: 5da5c215c0264f9aa6bb9e4508db32e8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737746965388
+status: 1
+tags: []
+user_id: anuroopkatukam

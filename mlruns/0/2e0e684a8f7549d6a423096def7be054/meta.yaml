@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/2e0e684a8f7549d6a423096def7be054/artifacts
+end_time: 1737746247672
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2e0e684a8f7549d6a423096def7be054
+run_name: gifted-seal-414
+run_uuid: 2e0e684a8f7549d6a423096def7be054
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737746247664
+status: 4
+tags: []
+user_id: anuroopkatukam

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/c35f84c713fe44da971da23e8fe50d49/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c35f84c713fe44da971da23e8fe50d49
+run_name: tasteful-snake-753
+run_uuid: c35f84c713fe44da971da23e8fe50d49
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737746590514
+status: 1
+tags: []
+user_id: anuroopkatukam

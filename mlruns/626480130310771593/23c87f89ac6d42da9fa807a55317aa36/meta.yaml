@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/626480130310771593/23c87f89ac6d42da9fa807a55317aa36/artifacts
+end_time: 1737995518473
+entry_point_name: ''
+experiment_id: '626480130310771593'
+lifecycle_stage: active
+run_id: 23c87f89ac6d42da9fa807a55317aa36
+run_name: Experiment_2_TV_Radio
+run_uuid: 23c87f89ac6d42da9fa807a55317aa36
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737995518440
+status: 3
+tags: []
+user_id: anuroopkatukam

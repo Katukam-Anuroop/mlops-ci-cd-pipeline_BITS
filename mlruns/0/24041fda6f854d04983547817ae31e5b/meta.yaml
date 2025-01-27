@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/24041fda6f854d04983547817ae31e5b/artifacts
+end_time: 1737995032215
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 24041fda6f854d04983547817ae31e5b
+run_name: intrigued-grub-788
+run_uuid: 24041fda6f854d04983547817ae31e5b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737995030796
+status: 3
+tags: []
+user_id: anuroopkatukam

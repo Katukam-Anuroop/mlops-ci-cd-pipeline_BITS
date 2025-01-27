@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/50bc156172784cff9e082263134d18df/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 50bc156172784cff9e082263134d18df
+run_name: sneaky-gull-929
+run_uuid: 50bc156172784cff9e082263134d18df
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737747094344
+status: 1
+tags: []
+user_id: anuroopkatukam

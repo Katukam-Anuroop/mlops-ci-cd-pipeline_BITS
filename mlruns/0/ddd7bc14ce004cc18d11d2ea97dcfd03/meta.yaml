@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/ddd7bc14ce004cc18d11d2ea97dcfd03/artifacts
+end_time: 1737992879175
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ddd7bc14ce004cc18d11d2ea97dcfd03
+run_name: luxuriant-bear-490
+run_uuid: ddd7bc14ce004cc18d11d2ea97dcfd03
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737992877268
+status: 3
+tags: []
+user_id: anuroopkatukam

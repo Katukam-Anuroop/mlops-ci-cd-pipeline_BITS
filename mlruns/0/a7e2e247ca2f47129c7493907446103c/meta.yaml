@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/a7e2e247ca2f47129c7493907446103c/artifacts
+end_time: 1737746396235
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a7e2e247ca2f47129c7493907446103c
+run_name: fearless-skunk-51
+run_uuid: a7e2e247ca2f47129c7493907446103c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737746396227
+status: 4
+tags: []
+user_id: anuroopkatukam

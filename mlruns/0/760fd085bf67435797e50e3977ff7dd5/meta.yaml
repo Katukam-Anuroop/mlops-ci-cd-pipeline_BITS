@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/760fd085bf67435797e50e3977ff7dd5/artifacts
+end_time: 1737995033660
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 760fd085bf67435797e50e3977ff7dd5
+run_name: loud-bat-386
+run_uuid: 760fd085bf67435797e50e3977ff7dd5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737995032221
+status: 3
+tags: []
+user_id: anuroopkatukam
